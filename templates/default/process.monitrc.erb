@@ -1,6 +1,6 @@
-check process <%= variables['process_name'] %> <%= variables['process_check'] %>
-    start program = "<%= variables['process_start_cmd'] %>"
-    stop  program = "<%= variables['process_stop_cmd'] %>"
-<% variables['conditions'].each do |if_stmt, then_stmt| %>
-    if <%= if_stmt %> then <%= then_stmt %>
-<% end %>
+check process <%= @process_name %> <%= @process_check %>
+    start program = "<%= @process_start_cmd %>"
+    stop  program = "<%= @process_stop_cmd %>"
+<% @conditions.each do |condition| -%>
+    if <%= condition[:if_stmt] %> then <%= condition[:then_stmt] %>
+<% end -%>
