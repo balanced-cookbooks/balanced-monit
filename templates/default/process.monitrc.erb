@@ -1,0 +1,6 @@
+check process <%= variables['process_name'] %> with pidfile <%= variables['process_pid'] %>
+    start program = "<%= variables['process_start_cmd'] %>"
+    stop  program = "<%= variables['process_stop_cmd'] %>"
+<% variables['conditions'].each do |if_stmt, then_stmt| %>
+    if <%= if_stmt %> then <%= then_stmt %>
+<% end %>
