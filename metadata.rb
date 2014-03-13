@@ -4,7 +4,6 @@ maintainer_email "matthew@balancedpayments.com"
 license          "All rights reserved"
 description      "Installs/Configures balanced-monit"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.1.1"
+version          "1.0.0"
 
-
-depends 'monit', '~> 1.3.3'
+depends          'monit', '~> 1.3'
